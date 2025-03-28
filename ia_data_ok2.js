@@ -12,7 +12,7 @@ app.use(session({ secret: "1234", resave: false, saveUninitialized: false, }));
 
 
 
-// Serve the `index.html` for the root URL
+// root URL
 app.get("/", (req, res) => {
   res.sendFile("/home/manu/Documents/IFK/proyectos/ia_data/index_ok.html");
   if (!req.session.diagnosis) {
@@ -45,10 +45,11 @@ const prompts=getPrompts(params.diagnostico, params.symptoms);
 		res.setHeader("Content-Type", "text/event-stream");
 		res.setHeader("Cache-Control", "no-cache");
 		res.setHeader("Connection", "keep-alive");
-		const system="You are a medical assistant that explains diseases to patients. The doctors have already evaluated a patient and diagnosed the disease (you are not diagnosticating, you are explaining what the disease is and the causal relation between symptoms and disease).\ndisease diagnosticated: "+params.diagnostico+"\nlist of symptoms: "+params.symptoms+". Use only the diagnosed disease and the list of symptoms"
-    	
+		
+		const system="You are a medical assistant that explains diseases to patients. The doctors have already evaluated a patient and diagnosed the disease (you are not diagnosticating, you are only explaining).\ndisease diagnosticated: "+params.diagnostico+"\nlist of symptoms: "+params.symptoms+". Use only the diagnosed disease and the list of symptoms"
     	let llm_rta = ""; // Variable to store the full response
-    	await generateDiagnosis(params.llm, system, prompts.hermes, false, 680, (chunk) => {
+
+		await generateDiagnosis(params.llm, system, prompts.hermes, false, 680, (chunk) => {
     	 	llm_rta += chunk;
         	res.write(chunk); // Write each chunk as SSE
       	});
@@ -172,30 +173,6 @@ let vec_dis=["1. fever", "2. cough", "3. headache", "4. frequent urination", "5.
   		},
   		{
         role: 'assistant',
-        content: "how is the id defined in the list?",
-      	},
-  		{
-        role: 'system',
-        content: "the number on the left of the disease name is the id of that disease.",
-      	},
-  		{
-        role: 'assistant',
-        content: "give me an example?",
-      	},
-  		{
-        role: 'system',
-        content: "'1. fever', indicates that the id of fever is 1",
-      	},
-  		{
-        role: 'assistant',
-        content: "another example",
-      	},
-  		{
-        role: 'system',
-        content: "'5. palpitations', indicates the id of palpitations is 5",
-      	},
-  		{
-        role: 'assistant',
         content: "what's the list of symptoms I should give the ids?",
       	},
   		{
@@ -208,7 +185,7 @@ let vec_dis=["1. fever", "2. cough", "3. headache", "4. frequent urination", "5.
 		res.setHeader("Cache-Control", "no-cache");
 		res.setHeader("Connection", "keep-alive"); 
     	
-    	let llm_rta = ""; // Variable to store the full response
+    	let llm_rta = ""; // full response
     	await generateDiagnosis(params.llm, '', chat , true, 560, (chunk) => {
     	 	llm_rta += chunk;
         	res.write(chunk); // Write each chunk as SSE
@@ -218,7 +195,7 @@ let vec_dis=["1. fever", "2. cough", "3. headache", "4. frequent urination", "5.
       		return res.status(500).json({ error: "LLM failed to generate chat rta." });
     		}
     	//req.session.previousResponse=llm_rta;
-    	res.end(); // Signal the end of the stream
+    	res.end(); // end of the stream
 
 
 

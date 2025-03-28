@@ -35,6 +35,7 @@ export const generateDiagnosis = async (llm, sys, prompt, is_chat, max_tokens, o
       		 }); 
     	}
     else {
+		console.log("ia generativa: \nprompt: "+prompt+"\nsystem: "+sys+"\nmodel: "+llm);
     	apiUrl = "http://localhost:11434/api/generate";
     	payload = JSON.stringify({ 
     			model: llm, 
