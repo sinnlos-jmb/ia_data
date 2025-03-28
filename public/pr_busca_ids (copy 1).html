@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IA Salud</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9; /* Light gray background */
+      color: #333; /* Dark gray text */
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    h1, h3 {
+      text-align: center;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr; /* Single column layout for smaller screens */
+      gap: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff; /* White background for contrast */
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 95%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    textarea {
+      resize: vertical; /* Allow vertical resizing */
+    }
+
+    button {
+    padding: 10px 15px;
+    width:60%;
+    text-align:center;
+    background-color: #80bfff; /* Light blue */
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block; /* Ensures the button can be centered */
+  	margin: 0 auto; /* Center the button horizontally */
+    }
+
+    button:hover {
+      background-color: #66a3ff; /* Darker blue */
+    }
+
+.label-with-icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  color: #333; /* Dark gray */
+  font-size: 12px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  display:contents;
+}
+
+.icon-button:hover {
+  background-color: white;
+}
+
+
+</style>
+
+<script src="./symptoms_diseases.js"></script>
+<script>
+// Helper function to generate trigrams
+function getTrigrams(text) {
+    const trigrams = [];
+    const paddedText = `  ${text.toLowerCase()} `;
+    for (let i = 0; i < paddedText.length - 2; i++) {
+        trigrams.push(paddedText.slice(i, i + 3));
+    }
+    return trigrams;
+}
+
+// Function to calculate similarity using trigrams
+function calculateSimilarity(str1, str2) {
+    const trigrams1 = new Set(getTrigrams(str1));
+    const trigrams2 = new Set(getTrigrams(str2));
+
+    const intersection = [...trigrams1].filter(tri => trigrams2.has(tri)).length;
+    const union = new Set([...trigrams1, ...trigrams2]).size;
+
+    return (intersection / union).toFixed(2);
+}
+
+
+
+// Main function to process symptoms and find matching disease IDs
+function findSymptomIds(inputSymptoms) {
+
+const symptomsList = inputSymptoms.split(',').map(symptom => symptom.trim().toLowerCase());
+ 	console.log("symptomsList[0]: "+symptomsList[0]+"\nsymptomsList: "+symptomsList);
+    const threshold = 0.3; // Similarity threshold for trigram-based matching
+    const result = {
+        vec_traditionalMatch: [],
+        vec_similarityMatch: []
+    };
+
+    symptomsList.forEach(inputSymptom => {
+        // Traditional matching
+        //const traditionalMatch = symptomsData.find(item => item.symptom.toLowerCase() === inputSymptom);
+        
+        var traditionalMatch = null;
+		for (var i = 0; i < symptomsData.length; i++) {
+    		var item = symptomsData[i];
+    		if (item.symptom.toLowerCase() === inputSymptom) {
+        		traditionalMatch = item;
+        		break;
+    			}
+			}
+        
+		result.vec_traditionalMatch.push(
+    		traditionalMatch ? traditionalMatch.id : `${inputSymptom} not found`
+			);
+        
+        console.log("vec_traditionalMatch[0]: "+result.vec_traditionalMatch[0]+"\nsymptomsList: "+symptomsList+"\ntypeof: "+typeof result.vec_traditionalMatch[0]);
+        console.log("symptomsList[0]: "+symptomsList[0]+"\nsymptomsList: "+symptomsList);
+        
+                /*/ Trigram-based similarity matching
+        symptomsList.forEach(inputSymptom => {
+            if (calculateSimilarity(inputSymptom, symptomLower) > threshold) {
+                result.similarityMatch.push(item.id);
+            	}
+        	});
+    
+
+        const similarMatches = symptomsData
+            .filter(item => calculateSimilarity(inputSymptom, item.symptom.toLowerCase()) > threshold)
+            .map(item => item.id);
+	console.log("typeof de similarMatches[0] previo push en result.similarityMatch: "+typeof similarMatches[0]+"\nvalor: "+similarMatches[0]);
+        result.similarityMatch.push(
+            similarMatches.length > 0 ? similarMatches : `${inputSymptom} not found` );
+         */    
+            
+var similarMatches = [];
+for (var i = 0; i < symptomsData.length; i++) {
+    var item = symptomsData[i];
+    const sim=calculateSimilarity(inputSymptom, item.symptom.toLowerCase());
+    if (sim > threshold) {
+        similarMatches.push([item.id, sim]);
+        console.log("similarMatches[0]: "+similarMatches[0]+"\ntypeof: "+typeof similarMatches[0]+"\nsimilaridad: "+sim);
+    }
+}
+
+if (similarMatches.length > 0) {
+    for (let i=0; i<similarMatches.length; i++) {
+    	result.vec_similarityMatch.push(similarMatches[i]);
+    	}
+//    result.vec_similarityMatch.push(similarMatches);
+   // console.log("result.vec_similarityMatch[0]: "+result.vec_similarityMatch[0]+"\ntypeof: "+typeof result.vec_similarityMatch[0]);
+	} 
+else {
+    result.vec_similarityMatch.push([inputSymptom, " not found"]);
+	}
+
+
+}); //por cada symptom del json
+
+    // Remove duplicates from similarity matches
+//    result.vec_similarityMatch = [...new Set(result.vec_similarityMatch)];
+let uniqueMatches = [], uniqueWeights=[], uniqueSymptoms;
+for (let i = 0; i < result.vec_similarityMatch.length; i++) {
+    let id_symptom = result.vec_similarityMatch[i][0], weight_match=result.vec_similarityMatch[i][1];
+    if (uniqueMatches.indexOf(id_symptom) === -1) {
+        uniqueMatches.push(id_symptom); 
+        uniqueWeights.push(weight_match); 
+        //agrego el array con id, similarity... en realidad los que similarity no es 1, hay que cotejar con usuario, y al final quedan todos los sintomas con total certeza... no puede pasar esa etapa un ffever, o menos un sintoma oracional que coincide una de las palabras (dolor de pecho, dolor abdominal).
+	    }
+	}
+result.vec_similarityMatch = [uniqueMatches, uniqueWeights];
+
+
+console.log("array de ids de symptoms encontrados y grado de similaridad: "+result.vec_similarityMatch[0]+", "+result.vec_similarityMatch[1]);
+
+let rta=document.getElementById('ta');
+ 
+rta.value="trigram: "+result.vec_similarityMatch[0]+"\ngrados de similaridad: "+result.vec_similarityMatch[1]+"\n\ntrad: "+result.vec_traditionalMatch;
+
+document.getElementById('ta_ids').value=JSON.stringify(getTopDiseases(result.vec_similarityMatch));
+}
+
+
+
+function getTopDiseases(symptomIds) { //symptomIds es matriz con dos arrayspor cada posicion array de dos elems: id_sintoma y weight
+    var diseaseWeights = [];
+    const canva=document.getElementById('ta_ids');
+
+//    console.log("array sintomas ids: "+symptomIds[0]);
+    
+    // Calculate weights for each disease
+    for (var i = 0; i < diseasesData.length; i++) {
+        var disease = diseasesData[i];
+        var totalWeight = 0;
+
+        for (var j = 0; j < disease.symptoms.length; j++) {
+            var symptom = disease.symptoms[j];
+
+			let match=symptomIds[0].indexOf(symptom.id);
+            if (match!==-1) {
+                totalWeight += symptom.weight*symptomIds[1][match];
+                console.log("coincidencia: symptom actual: "+symptom.id+", "+symptomIds+"\n weight del match: "+symptomIds[1][match]);
+            }
+        }
+
+        diseaseWeights.push({
+            disease: disease.disease,
+            totalWeight: totalWeight
+        });
+    }
+
+
+    // Sort diseases by weight in descending order and take the top 3
+    const topDiseases = diseaseWeights
+        .sort((a, b) => b.totalWeight - a.totalWeight)
+        .slice(0, 3);
+
+	//canva.value+="\n.\n"+JSON.stringify(topDiseases);
+
+
+    return topDiseases;
+}
+
+
+
+</script>
+
+<body>
+
+  <h1>IA Salud</h1>
+  <h3>App para obtener diagnósticos presuntivos a partir de síntomas.</h3>
+
+  <div class="container">
+    <!-- Symptom Input -->
+    <div class="form-group">
+      <label for="inp">Ingresar síntomas:</label>
+      <input type="text" id="inp" name="inp" placeholder="shortness of breath, heart complications, nausea" value="shortness of breath, heart complications, nausea">
+    </div>
+
+    <!-- Diagnosis Button -->
+    <button type="submit" onclick="findSymptomIds(document.getElementById('inp').value);">Generar Diagnóstico</button>
+
+    <!-- Identified Symptoms -->
+ <div class="form-group">
+  <div class="label-with-icon">
+    <label for="ta">Síntomas identificados:</label>
+    <button type="button" class="icon-button" onclick="document.getElementById('ta').value=''; document.getElementById('ta_ids').value='';" aria-label="Clear text">
+      🗑️
+    </button>
+  </div>
+  <textarea id="ta" name="ta" rows="5">ids:</textarea>
+</div>  
+
+    <!-- Probable Pathologies -->
+    <div class="form-group">
+      <label for="ta_ids">Patologías probables:</label>
+      <textarea id="ta_ids" name="ta_ids" rows="5">ids:</textarea>
+    </div>
+  </div>
+
+</body>
+</html>
