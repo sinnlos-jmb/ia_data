@@ -1,0 +1,41 @@
+[
+  {
+    "id": "1",
+    "symptom": "shortness of breath",
+    "disease": "pulmonary hypertension",
+    "disease_explanation": "A type of high blood pressure affecting arteries in the lungs and the heart.",
+    "diagnosis": "blood tests, chest X-ray, or echocardiogram",
+    "diagnosis_explanation": "These tests evaluate lung and heart function and identify structural abnormalities.",
+    "metadata": {
+      "severity": "high",
+      "category": "respiratory"
+    },
+    "keywords": ["breathlessness", "lung pressure", "heart complications"]
+  },
+  {
+    "id": "2",
+    "symptom": "chest pain",
+    "disease": "angina",
+    "disease_explanation": "Chest pain caused by reduced blood flow to the heart.",
+    "diagnosis": "stress test or coronary angiography",
+    "diagnosis_explanation": "A stress test evaluates heart performance under stress, while angiography visualizes blood flow.",
+    "metadata": {
+      "severity": "medium",
+      "category": "cardiovascular"
+    },
+    "keywords": ["chest discomfort", "heart pain", "reduced blood flow"]
+  },
+  {
+    "id": "3",
+    "symptom": "persistent cough",
+    "disease": "bronchitis",
+    "disease_explanation": "Inflammation of the bronchial tubes leading to coughing and mucus production.",
+    "diagnosis": "physical exam or chest X-ray",
+    "diagnosis_explanation": "These tests help assess inflammation in the airways.",
+    "metadata": {
+      "severity": "medium",
+      "category": "respiratory"
+    },
+    "keywords": ["coughing", "mucus", "bronchial inflammation"]
+  }
+]

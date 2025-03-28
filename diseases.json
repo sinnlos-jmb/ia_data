@@ -1,0 +1,825 @@
+[
+    {
+        "id": "1",
+        "disease": "pulmonary hypertension",
+        "disease_explanation": "A type of high blood pressure affecting arteries in the lungs and the heart.",
+        "treatment": "blood tests, chest X-ray, or echocardiogram",
+        "treatment_explanation": "These tests evaluate lung and heart function and identify structural abnormalities.",
+        "metadata": {
+            "severity": "high",
+            "category": "respiratory"
+        },
+        "symptoms": [
+            {
+                "id": 1,
+                "weight": 1
+            },
+            {
+                "id": 2,
+                "weight": 1
+            },
+            {
+                "id": 3,
+                "weight": 1
+            },
+            {
+                "id": 4,
+                "weight": 1
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "disease": "angina",
+        "disease_explanation": "Chest pain caused by reduced blood flow to the heart.",
+        "treatment": "stress test or coronary angiography",
+        "treatment_explanation": "A stress test evaluates heart performance under stress, while angiography visualizes blood flow.",
+        "metadata": {
+            "severity": "medium",
+            "category": "cardiovascular"
+        },
+        "symptoms": [
+            {
+                "id": 5,
+                "weight": 1
+            },
+            {
+                "id": 6,
+                "weight": 1
+            },
+            {
+                "id": 7,
+                "weight": 1
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "disease": "bronchitis",
+        "disease_explanation": "Inflammation of the bronchial tubes leading to coughing and mucus production.",
+        "treatment": "physical exam or chest X-ray",
+        "treatment_explanation": "These tests help assess inflammation in the airways.",
+        "metadata": {
+            "severity": "medium",
+            "category": "respiratory"
+        },
+        "symptoms": [
+            {
+                "id": 8,
+                "weight": 1
+            },
+            {
+                "id": 9,
+                "weight": 1
+            },
+            {
+                "id": 10,
+                "weight": 1
+            }
+        ]
+    },
+    {
+        "id": "4",
+        "disease": "rheumatoid arthritis",
+        "disease_explanation": "A chronic autoimmune disorder that causes inflammation and pain in the joints.",
+        "treatment": "physical exam, blood tests, or imaging tests",
+        "treatment_explanation": "These tests help identify the extent of joint damage and inflammation.",
+        "metadata": {
+            "severity": "high",
+            "category": "autoimmune"
+        },
+        "symptoms": [
+            {
+                "id": 11,
+                "weight": 1
+            },
+            {
+                "id": 12,
+                "weight": 1
+            },
+            {
+                "id": 13,
+                "weight": 1
+            },
+            {
+                "id": 14,
+                "weight": 1
+            }
+        ]
+    },
+    {
+        "id": "5",
+        "disease": "eczema",
+        "disease_explanation": "A chronic skin condition characterized by dry, itchy, and inflamed skin.",
+        "treatment": "physical exam or skin biopsy",
+        "treatment_explanation": "A physical exam or skin biopsy helps identify the type and severity of eczema.",
+        "metadata": {
+            "severity": "low",
+            "category": "dermatological"
+        },
+        "symptoms": [
+            {
+                "id": 15,
+                "weight": 1
+            },
+            {
+                "id": 16,
+                "weight": 1
+            },
+            {
+                "id": 17,
+                "weight": 1
+            },
+            {
+                "id": 18,
+                "weight": 1
+            }
+        ]
+    },
+    {
+        "id": "6",
+        "disease": "epilepsy",
+        "disease_explanation": "A neurological disorder characterized by recurrent seizures.",
+        "treatment": "EEG or imaging tests",
+        "treatment_explanation": "An EEG measures electrical activity in the brain, while imaging tests help identify structural abnormalities.",
+        "metadata": {
+            "severity": "high",
+            "category": "neurological"
+        },
+        "symptoms": [
+            {
+                "id": 19,
+                "weight": 1
+            },
+            {
+                "id": 20,
+                "weight": 1
+            },
+            {
+                "id": 21,
+                "weight": 1
+            }
+        ]
+    },
+    {
+        "id": "7",
+        "disease": "Alzheimer's disease",
+        "disease_explanation": "A progressive neurological disorder that affects memory, thinking, and behavior.",
+        "treatment": "clinical evaluation or imaging tests",
+        "treatment_explanation": "A clinical evaluation assesses cognitive function, while imaging tests help identify structural changes in the brain.",
+        "metadata": {
+            "severity": "high",
+            "category": "neurological"
+        },
+        "symptoms": [
+            {
+                "id": 22,
+                "weight": 1
+            },
+            {
+                "id": 23,
+                "weight": 1
+            },
+            {
+                "id": 24,
+                "weight": 1
+            }
+        ]
+    },
+    {
+        "id": "8",
+        "disease": "diabetes",
+        "disease_explanation": "A metabolic disorder characterized by high blood sugar levels.",
+        "treatment": "blood tests",
+        "treatment_explanation": "Blood tests measure blood glucose levels to diagnose diabetes.",
+        "metadata": {
+            "severity": "medium",
+            "category": "endocrine"
+        },
+        "symptoms": [
+            {
+                "id": 25,
+                "weight": 1
+            },
+            {
+                "id": 26,
+                "weight": 1
+            },
+            {
+                "id": 27,
+                "weight": 1
+            },
+            {
+                "id": 25,
+                "weight": 1
+            }
+        ]
+    },
+    {
+        "id": "9",
+        "disease": "appendicitis",
+        "disease_explanation": "Inflammation of the appendix, which can cause severe abdominal pain.",
+        "treatment": "physical exam, blood tests, or imaging tests",
+        "treatment_explanation": "These tests help identify the location and severity of the inflammation.",
+        "metadata": {
+            "severity": "high",
+            "category": "digestive"
+        },
+        "symptoms": [
+            {
+                "id": 28,
+                "weight": 1
+            },
+            {
+                "id": 29,
+                "weight": 1
+            },
+            {
+                "id": 30,
+                "weight": 1
+            },
+            {
+                "id": 31,
+                "weight": 1
+            }
+        ]
+    },
+    {
+        "id": "10",
+        "disease": "influenza",
+        "disease_explanation": "A contagious respiratory illness caused by influenza viruses.",
+        "treatment": "clinical evaluation or rapid influenza diagnostic tests",
+        "treatment_explanation": "These tests confirm the presence of influenza virus in the body.",
+        "metadata": {
+            "severity": "medium",
+            "category": "infectious"
+        },
+        "symptoms": [
+            {
+                "id": 32,
+                "weight": 1
+            },
+            {
+                "id": 33,
+                "weight": 1
+            },
+            {
+                "id": 38,
+                "weight": 1
+            },
+            {
+                "id": 45,
+                "weight": 1
+            },
+            {
+                "id": 8,
+                "weight": 1
+            }
+        ]
+    },
+    {
+        "id": "11",
+        "disease": "urinary tract infection (UTI)",
+        "disease_explanation": "An infection in any part of the urinary system, often caused by bacteria.",
+        "treatment": "urinalysis or urine culture",
+        "treatment_explanation": "Tests analyze urine for bacteria or infection markers.",
+        "metadata": {
+            "severity": "low",
+            "category": "urinary"
+        },
+        "symptoms": [
+            {
+                "id": 35,
+                "weight": 1
+            },
+            {
+                "id": 36,
+                "weight": 1
+            },
+            {
+                "id": 37,
+                "weight": 1
+            }
+        ]
+    },
+    {
+        "id": "12",
+        "disease": "anemia",
+        "disease_explanation": "A condition characterized by a lack of red blood cells or hemoglobin in the blood.",
+        "treatment": "blood tests",
+        "treatment_explanation": "Blood tests measure red blood cell count, hemoglobin, and other factors to diagnose anemia.",
+        "metadata": {
+            "severity": "medium",
+            "category": "hematological"
+        },
+        "symptoms": [
+            {
+                "id": 38,
+                "weight": 1
+            },
+            {
+                "id": 39,
+                "weight": 1
+            },
+            {
+                "id": 40,
+                "weight": 1
+            },
+            {
+                "id": 41,
+                "weight": 1
+            }
+        ]
+    },
+    {
+        "id": "13",
+        "disease": "cataracts",
+        "disease_explanation": "Clouding of the eye lens, leading to decreased vision.",
+        "treatment": "ophthalmic examination",
+        "treatment_explanation": "A comprehensive eye exam assesses lens clarity.",
+        "metadata": {
+            "severity": "medium",
+            "category": "ophthalmology"
+        },
+        "symptoms": [
+            {
+                "id": 42,
+                "weight": 1
+            },
+            {
+                "id": 43,
+                "weight": 1
+            },
+            {
+                "id": 44,
+                "weight": 1
+            }
+        ]
+    },
+    {
+        "id": "14",
+        "disease": "migraine",
+        "disease_explanation": "A neurological condition characterized by intense headaches often accompanied by nausea and sensitivity to light.",
+        "treatment": "clinical evaluation or MRI",
+        "treatment_explanation": "Clinical evaluation identifies patterns, while MRI rules out other causes.",
+        "metadata": {
+            "severity": "high",
+            "category": "neurological"
+        },
+        "symptoms": [
+            {
+                "id": 45,
+                "weight": 1
+            },
+            {
+                "id": 46,
+                "weight": 1
+            },
+            {
+                "id": 47,
+                "weight": 1
+            }
+        ]
+    },
+    {
+        "id": "15",
+        "disease": "lymphoma",
+        "disease_explanation": "A type of cancer that begins in the lymphatic system.",
+        "treatment": "lymph node biopsy",
+        "treatment_explanation": "A biopsy examines lymphatic tissue for cancer cells.",
+        "metadata": {
+            "severity": "high",
+            "category": "oncology"
+        },
+        "symptoms": [
+            {
+                "id": 48,
+                "weight": 1
+            },
+            {
+                "id": 49,
+                "weight": 1
+            },
+            {
+                "id": 50,
+                "weight": 1
+            }
+        ]
+    },
+    {
+        "id": "16",
+        "disease": "esophageal cancer",
+        "disease_explanation": "A cancer that develops in the esophagus, making swallowing difficult.",
+        "treatment": "endoscopy or biopsy",
+        "treatment_explanation": "Endoscopy visualizes the esophagus, and a biopsy confirms the presence of cancer cells.",
+        "metadata": {
+            "severity": "high",
+            "category": "oncology"
+        },
+        "symptoms": [
+            {
+                "id": 51,
+                "weight": 1
+            },
+            {
+                "id": 52,
+                "weight": 1
+            },
+            {
+                "id": 49,
+                "weight": 1
+            }
+        ]
+    },
+    {
+        "id": "17",
+        "disease": "Crohn's disease",
+        "disease_explanation": "A chronic inflammatory bowel disease that affects the lining of the digestive tract.",
+        "treatment": "colonoscopy or blood tests",
+        "treatment_explanation": "Colonoscopy examines the bowel, and blood tests detect inflammation markers.",
+        "metadata": {
+            "severity": "medium",
+            "category": "digestive"
+        },
+        "symptoms": [
+            {
+                "id": 53,
+                "weight": 1
+            },
+            {
+                "id": 54,
+                "weight": 1
+            },
+            {
+                "id": 55,
+                "weight": 1
+            }
+        ]
+    },
+    {
+        "id": "18",
+        "disease": "deep vein thrombosis (DVT)",
+        "disease_explanation": "A blood clot forms in a deep vein, usually in the legs, causing swelling and pain.",
+        "treatment": "ultrasound or blood tests",
+        "treatment_explanation": "An ultrasound detects clots, and blood tests identify clotting abnormalities.",
+        "metadata": {
+            "severity": "high",
+            "category": "vascular"
+        },
+        "symptoms": [
+            {
+                "id": 56,
+                "weight": 1
+            },
+            {
+                "id": 57,
+                "weight": 1
+            },
+            {
+                "id": 58,
+                "weight": 1
+            }
+        ]
+    },
+    {
+        "id": "19",
+        "disease": "peripheral neuropathy",
+        "disease_explanation": "Damage to peripheral nerves causes weakness, numbness, and pain in extremities.",
+        "treatment": "nerve conduction studies or blood tests",
+        "treatment_explanation": "These tests measure nerve function and detect underlying causes.",
+        "metadata": {
+            "severity": "medium",
+            "category": "neurological"
+        },
+        "symptoms": [
+            {
+                "id": 59,
+                "weight": 1
+            },
+            {
+                "id": 60,
+                "weight": 1
+            },
+            {
+                "id": 61,
+                "weight": 1
+            }
+        ]
+    },
+    {
+        "id": "20",
+        "disease": "osteoporosis",
+        "disease_explanation": "A condition where bones become weak and brittle, increasing fracture risk.",
+        "treatment": "bone density scan",
+        "treatment_explanation": "A scan measures bone strength and detects osteoporosis.",
+        "metadata": {
+            "severity": "medium",
+            "category": "musculoskeletal"
+        },
+        "symptoms": [
+            {
+                "id": 62,
+                "weight": 1
+            },
+            {
+                "id": 63,
+                "weight": 1
+            },
+            {
+                "id": 64,
+                "weight": 1
+            }
+        ]
+    },
+    {
+        "id": "21",
+        "disease": "diabetes insipidus",
+        "disease_explanation": "A rare condition causing imbalance in body fluids and excessive thirst.",
+        "treatment": "water deprivation test",
+        "treatment_explanation": "This test measures the body's ability to conserve water.",
+        "metadata": {
+            "severity": "medium",
+            "category": "endocrine"
+        },
+        "symptoms": [
+            {
+                "id": 65,
+                "weight": 1
+            },
+            {
+                "id": 35,
+                "weight": 1
+            },
+            {
+                "id": 66,
+                "weight": 1
+            },
+            {
+                "id": 67,
+                "weight": 1
+            }
+        ]
+    },
+    {
+        "id": "22",
+        "disease": "jaundice",
+        "disease_explanation": "A condition caused by excess bilirubin in the blood, indicating liver issues.",
+        "treatment": "liver function tests",
+        "treatment_explanation": "Tests measure bilirubin and enzyme levels to assess liver health.",
+        "metadata": {
+            "severity": "medium",
+            "category": "hepatic"
+        },
+        "symptoms": [
+            {
+                "id": 68,
+                "weight": 1
+            },
+            {
+                "id": 69,
+                "weight": 1
+            },
+            {
+                "id": 70,
+                "weight": 1
+            },
+            {
+                "id": 71,
+                "weight": 1
+            }
+        ]
+    },
+    {
+        "id": "23",
+        "disease": "hemophilia",
+        "disease_explanation": "A rare genetic disorder affecting blood clotting ability.",
+        "treatment": "clotting factor tests",
+        "treatment_explanation": "Tests measure clotting factor levels to diagnose hemophilia.",
+        "metadata": {
+            "severity": "high",
+            "category": "hematological"
+        },
+        "symptoms": [
+            {
+                "id": 72,
+                "weight": 1
+            },
+            {
+                "id": 73,
+                "weight": 1
+            },
+            {
+                "id": 74,
+                "weight": 1
+            }
+        ]
+    },
+    {
+        "id": "24",
+        "disease": "hypothyroidism",
+        "disease_explanation": "A condition where the thyroid gland produces insufficient hormones.",
+        "treatment": "TSH blood test",
+        "treatment_explanation": "The test measures thyroid-stimulating hormone levels.",
+        "metadata": {
+            "severity": "low",
+            "category": "endocrine"
+        },
+        "symptoms": [
+            {
+                "id": 75,
+                "weight": 1
+            },
+            {
+                "id": 76,
+                "weight": 1
+            },
+            {
+                "id": 77,
+                "weight": 1
+            }
+        ]
+    },
+    {
+        "id": "25",
+        "disease": "asthma",
+        "disease_explanation": "A chronic condition causing airway inflammation and narrowing.",
+        "treatment": "spirometry or peak flow test",
+        "treatment_explanation": "These tests measure lung function and airway obstruction.",
+        "metadata": {
+            "severity": "medium",
+            "category": "respiratory"
+        },
+        "symptoms": [
+            {
+                "id": 78,
+                "weight": 1
+            },
+            {
+                "id": 30,
+                "weight": 1
+            },
+            {
+                "id": 79,
+                "weight": 1
+            }
+        ]
+    },
+    {
+        "id": "26",
+        "disease": "colorectal cancer",
+        "disease_explanation": "Cancer affecting the colon or rectum, often detected through bleeding.",
+        "treatment": "colonoscopy or stool tests",
+        "treatment_explanation": "Colonoscopy examines the bowel, while stool tests detect hidden blood.",
+        "metadata": {
+            "severity": "high",
+            "category": "oncology"
+        },
+        "symptoms": [
+            {
+                "id": 80,
+                "weight": 1
+            },
+            {
+                "id": 81,
+                "weight": 1
+            }
+        ]
+    },
+    {
+        "id": "27",
+        "disease": "tonsillitis",
+        "disease_explanation": "Inflammation of the tonsils, usually due to infection.",
+        "treatment": "throat swab or clinical evaluation",
+        "treatment_explanation": "Tests identify bacterial or viral infection causing tonsillitis.",
+        "metadata": {
+            "severity": "low",
+            "category": "infectious"
+        },
+        "symptoms": [
+            {
+                "id": 82,
+                "weight": 1
+            },
+            {
+                "id": 83,
+                "weight": 1
+            },
+            {
+                "id": 84,
+                "weight": 1
+            }
+        ]
+    },
+    {
+        "id": "28",
+        "disease": "atrial fibrillation",
+        "disease_explanation": "A heart condition causing irregular and often rapid heartbeat.",
+        "treatment": "ECG or Holter monitor",
+        "treatment_explanation": "These tests record heart rhythm to detect abnormalities.",
+        "metadata": {
+            "severity": "high",
+            "category": "cardiovascular"
+        },
+        "symptoms": [
+            {
+                "id": 85,
+                "weight": 1
+            },
+            {
+                "id": 86,
+                "weight": 1
+            },
+            {
+                "id": 87,
+                "weight": 1
+            },
+            {
+                "id": 88,
+                "weight": 1
+            }
+        ]
+    },
+    {
+        "id": "29",
+        "disease": "kidney disease",
+        "disease_explanation": "A condition where kidney function is impaired.",
+        "treatment": "urinalysis or kidney function tests",
+        "treatment_explanation": "Tests measure waste and electrolyte levels in urine and blood.",
+        "metadata": {
+            "severity": "medium",
+            "category": "renal"
+        },
+        "symptoms": [
+            {
+                "id": 89,
+                "weight": 1
+            },
+            {
+                "id": 90,
+                "weight": 1
+            },
+            {
+                "id": 91,
+                "weight": 1
+            }
+        ]
+    },
+    {
+        "id": "30",
+        "disease": "Sjogren's syndrome",
+        "disease_explanation": "An autoimmune disorder causing dryness in the mouth and eyes.",
+        "treatment": "blood tests or lip biopsy",
+        "treatment_explanation": "These tests detect autoantibodies and confirm glandular damage.",
+        "metadata": {
+            "severity": "low",
+            "category": "autoimmune"
+        },
+        "symptoms": [
+            {
+                "id": 92,
+                "weight": 1
+            },
+            {
+                "id": 93,
+                "weight": 1
+            }
+        ]
+    },
+    {
+    "id": "31",
+    "disease": "Gastroenteritis",
+    "disease_explanation": "An inflammation of the stomach and intestines, often caused by viruses, bacteria, or parasites.",
+    "treatment": "hydration, rest, oral rehydration solutions",
+    "treatment_explanation": "Replacing lost fluids and electrolytes is crucial. Antidiarrheal medications may be used in some cases, and antibiotics may be prescribed for bacterial infections.",
+    "metadata": {
+        "severity": "moderate",
+        "category": "infectious"
+    },
+    "symptoms": [
+        {
+            "id": 53,
+            "weight": 1
+        },
+        {
+            "id": 94,
+            "weight": 1
+        },
+        {
+            "id": 96,
+            "name": "abdominal pain"
+        },
+        {
+            "id": 47,
+            "weight": 1
+        },
+        {
+            "id": 32,
+            "weight": 1
+        },
+        {
+            "id": 95,
+            "weight": 1
+        }
+    ]
+}
+]

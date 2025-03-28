@@ -1,0 +1,560 @@
+[
+  {
+    "id": "chapter-1",
+    "title": "Understanding Hypertension",
+    "content": "Hypertension, commonly known as high blood pressure, occurs when the force of blood against artery walls is consistently too high. It is a major risk factor for heart disease and stroke.",
+    "metadata": {
+      "chapter": 1,
+      "type": "chapter"
+    }
+  },
+  {
+    "id": "section-1.1",
+    "title": "What is Hypertension?",
+    "content": "Blood pressure is measured in millimeters of mercury (mmHg) and recorded as two numbers: systolic and diastolic. Hypertension is defined as having a systolic reading of 130 mmHg or higher, or a diastolic reading of 80 mmHg or higher.",
+    "metadata": {
+      "chapter": 1,
+      "section": 1.1,
+      "type": "section"
+    }
+  },
+  {
+    "id": "section-1.2",
+    "title": "Types of Hypertension",
+    "content": "There are two main types: primary (essential) hypertension, which develops gradually over years, and secondary hypertension, caused by underlying health conditions such as kidney disease or hormonal disorders.",
+    "metadata": {
+      "chapter": 1,
+      "section": 1.2,
+      "type": "section"
+    }
+  },
+  {
+    "id": "chapter-2",
+    "title": "Causes and Risk Factors",
+    "content": "Hypertension can result from a variety of causes, including genetic predisposition, lifestyle factors like poor diet, and medical conditions.",
+    "metadata": {
+      "chapter": 2,
+      "type": "chapter"
+    }
+  },
+  {
+    "id": "section-2.1",
+    "title": "Lifestyle Factors",
+    "content": "Poor diet, excessive salt intake, lack of physical activity, and obesity contribute significantly to the development of hypertension.",
+    "metadata": {
+      "chapter": 2,
+      "section": 2.1,
+      "type": "section"
+    }
+  },
+  {
+    "id": "section-2.2",
+    "title": "Genetic and Medical Causes",
+    "content": "Hypertension often runs in families, suggesting a genetic link. It can also be caused by medical conditions such as sleep apnea, chronic kidney disease, and adrenal gland tumors.",
+    "metadata": {
+      "chapter": 2,
+      "section": 2.2,
+      "type": "section"
+    }
+  },
+  {
+    "id": "chapter-3",
+    "title": "Complications of Hypertension",
+    "content": "Uncontrolled hypertension can lead to serious health problems, including heart attack, stroke, kidney damage, and vision loss.",
+    "metadata": {
+      "chapter": 3,
+      "type": "chapter"
+    }
+  },
+  {
+    "id": "section-3.1",
+    "title": "Cardiovascular Complications",
+    "content": "High blood pressure increases the workload on the heart, leading to conditions like heart failure, coronary artery disease, and arrhythmias.",
+    "metadata": {
+      "chapter": 3,
+      "section": 3.1,
+      "type": "section"
+    }
+  },
+  {
+    "id": "section-3.2",
+    "title": "Organ Damage",
+    "content": "Prolonged hypertension can damage organs such as the kidneys, eyes, and brain. For example, hypertensive nephropathy can lead to kidney failure.",
+    "metadata": {
+      "chapter": 3,
+      "section": 3.2,
+      "type": "section"
+    }
+  }
+,
+  {
+    "id": "chapter-1",
+    "title": "Understanding Diabetes",
+    "content": "Diabetes is a chronic condition characterized by high levels of sugar (glucose) in the blood. It occurs when the body cannot produce enough insulin or cannot effectively use the insulin it produces.",
+    "metadata": {
+      "chapter": 1,
+      "type": "chapter"
+    }
+  },
+  {
+    "id": "section-1.1",
+    "title": "What is Diabetes?",
+    "content": "Diabetes affects the body’s ability to regulate blood glucose. Insulin, a hormone produced by the pancreas, plays a key role in moving glucose from the bloodstream into cells for energy.",
+    "metadata": {
+      "chapter": 1,
+      "section": 1.1,
+      "type": "section"
+    }
+  },
+  {
+    "id": "section-1.2",
+    "title": "Types of Diabetes",
+    "content": "There are three main types of diabetes: Type 1 diabetes, an autoimmune condition; Type 2 diabetes, often linked to lifestyle factors; and gestational diabetes, which occurs during pregnancy.",
+    "metadata": {
+      "chapter": 1,
+      "section": 1.2,
+      "type": "section"
+    }
+  },
+  {
+    "id": "chapter-2",
+    "title": "Causes and Risk Factors",
+    "content": "Diabetes can be caused by genetic factors, autoimmune reactions, and lifestyle-related issues such as poor diet, lack of exercise, and obesity.",
+    "metadata": {
+      "chapter": 2,
+      "type": "chapter"
+    }
+  },
+  {
+    "id": "section-2.1",
+    "title": "Lifestyle Factors",
+    "content": "Dietary habits high in sugar and refined carbs, combined with sedentary lifestyles, significantly contribute to the development of Type 2 diabetes.",
+    "metadata": {
+      "chapter": 2,
+      "section": 2.1,
+      "type": "section"
+    }
+  },
+  {
+    "id": "section-2.2",
+    "title": "Genetic and Autoimmune Causes",
+    "content": "Type 1 diabetes is an autoimmune disorder where the immune system attacks insulin-producing cells. Family history can also increase the risk of diabetes.",
+    "metadata": {
+      "chapter": 2,
+      "section": 2.2,
+      "type": "section"
+    }
+  },
+  {
+    "id": "chapter-3",
+    "title": "Complications of Diabetes",
+    "content": "If left uncontrolled, diabetes can lead to severe complications, including cardiovascular disease, kidney failure, nerve damage, and vision loss.",
+    "metadata": {
+      "chapter": 3,
+      "type": "chapter"
+    }
+  },
+  {
+    "id": "section-3.1",
+    "title": "Cardiovascular Complications",
+    "content": "Diabetes increases the risk of heart attack, stroke, and atherosclerosis due to elevated blood sugar damaging blood vessels.",
+    "metadata": {
+      "chapter": 3,
+      "section": 3.1,
+      "type": "section"
+    }
+  },
+  {
+    "id": "section-3.2",
+    "title": "Neuropathy and Organ Damage",
+    "content": "High blood sugar can damage nerves (diabetic neuropathy) and organs, particularly the kidneys (diabetic nephropathy) and eyes (diabetic retinopathy).",
+    "metadata": {
+      "chapter": 3,
+      "section": 3.2,
+      "type": "section"
+    }
+  }
+,
+[
+  {
+    "id": "chapter-1",
+    "title": "Understanding Lung Cancer",
+    "content": "Lung cancer is a type of cancer that begins in the lungs. It is one of the leading causes of cancer-related deaths worldwide and is strongly associated with smoking, though it can also affect non-smokers.",
+    "metadata": {
+      "chapter": 1,
+      "type": "chapter"
+    }
+  },
+  {
+    "id": "section-1.1",
+    "title": "What is Lung Cancer?",
+    "content": "Lung cancer occurs when abnormal cells in the lung grow uncontrollably, forming tumors that interfere with normal lung function.",
+    "metadata": {
+      "chapter": 1,
+      "section": 1.1,
+      "type": "section"
+    }
+  },
+  {
+    "id": "section-1.2",
+    "title": "Types of Lung Cancer",
+    "content": "The two main types of lung cancer are non-small cell lung cancer (NSCLC), which accounts for about 85% of cases, and small cell lung cancer (SCLC), which is more aggressive but less common.",
+    "metadata": {
+      "chapter": 1,
+      "section": 1.2,
+      "type": "section"
+    }
+  },
+  {
+    "id": "chapter-2",
+    "title": "Causes and Risk Factors",
+    "content": "Lung cancer is primarily caused by long-term exposure to carcinogens, such as those found in cigarette smoke, as well as environmental and genetic factors.",
+    "metadata": {
+      "chapter": 2,
+      "type": "chapter"
+    }
+  },
+  {
+    "id": "section-2.1",
+    "title": "Smoking and Carcinogens",
+    "content": "Smoking is the leading cause of lung cancer. Tobacco contains carcinogens that damage lung cells, leading to mutations and cancer over time.",
+    "metadata": {
+      "chapter": 2,
+      "section": 2.1,
+      "type": "section"
+    }
+  },
+  {
+    "id": "section-2.2",
+    "title": "Environmental and Genetic Factors",
+    "content": "Exposure to radon gas, air pollution, and asbestos can increase lung cancer risk. Family history of lung cancer may also play a role.",
+    "metadata": {
+      "chapter": 2,
+      "section": 2.2,
+      "type": "section"
+    }
+  },
+  {
+    "id": "chapter-3",
+    "title": "Symptoms of Lung Cancer",
+    "content": "Symptoms of lung cancer often appear in the later stages and may include a persistent cough, chest pain, and difficulty breathing.",
+    "metadata": {
+      "chapter": 3,
+      "type": "chapter"
+    }
+  },
+  {
+    "id": "section-3.1",
+    "title": "Early Symptoms",
+    "content": "Early symptoms include a chronic cough, coughing up blood, and unexplained weight loss. These symptoms are often mistaken for less serious conditions.",
+    "metadata": {
+      "chapter": 3,
+      "section": 3.1,
+      "type": "section"
+    }
+  },
+  {
+    "id": "section-3.2",
+    "title": "Advanced Symptoms",
+    "content": "Advanced symptoms may include severe chest pain, hoarseness, and swelling of the face or neck due to tumor pressure on nearby structures.",
+    "metadata": {
+      "chapter": 3,
+      "section": 3.2,
+      "type": "section"
+    }
+  },
+  {
+    "id": "chapter-4",
+    "title": "Diagnosis and Treatment",
+    "content": "Diagnosis of lung cancer involves imaging and biopsy. Treatment options include surgery, radiation therapy, chemotherapy, and targeted therapies, depending on the stage and type of cancer.",
+    "metadata": {
+      "chapter": 4,
+      "type": "chapter"
+    }
+  },
+  {
+    "id": "section-4.1",
+    "title": "Diagnostic Methods",
+    "content": "Methods include chest X-rays, CT scans, and biopsy. PET scans and molecular testing help determine the stage and treatment options.",
+    "metadata": {
+      "chapter": 4,
+      "section": 4.1,
+      "type": "section"
+    }
+  },
+  {
+    "id": "section-4.2",
+    "title": "Treatment Approaches",
+    "content": "Treatment depends on cancer type and stage. Surgery is common for early-stage cancer, while advanced stages may require a combination of therapies.",
+    "metadata": {
+      "chapter": 4,
+      "section": 4.2,
+      "type": "section"
+    }
+  },
+  {
+    "id": "chapter-5",
+    "title": "Prevention and Prognosis",
+    "content": "Quitting smoking, avoiding secondhand smoke, and reducing exposure to environmental risks like radon can lower lung cancer risk. Prognosis varies based on stage and treatment response.",
+    "metadata": {
+      "chapter": 5,
+      "type": "chapter"
+    }
+  },
+  {
+    "id": "section-5.1",
+    "title": "Prevention Strategies",
+    "content": "Avoiding smoking, regular screenings for high-risk individuals, and maintaining a healthy lifestyle can significantly reduce lung cancer risk.",
+    "metadata": {
+      "chapter": 5,
+      "section": 5.1,
+      "type": "section"
+    }
+  },
+  {
+    "id": "section-5.2",
+    "title": "Outlook and Survival Rates",
+    "content": "Survival rates depend on early detection. The 5-year survival rate is significantly higher for localized cancer than for advanced stages.",
+    "metadata": {
+      "chapter": 5,
+      "section": 5.2,
+      "type": "section"
+    }
+  }
+,
+  {
+    "id": "chapter-1",
+    "title": "Understanding Influenza",
+    "content": "Influenza, commonly known as the flu, is a contagious respiratory illness caused by influenza viruses. It can range from mild to severe and can lead to complications, especially in high-risk groups.",
+    "metadata": {
+      "chapter": 1,
+      "type": "chapter"
+    }
+  },
+  {
+    "id": "section-1.1",
+    "title": "What is Influenza?",
+    "content": "Influenza is a viral infection that affects the respiratory system, including the nose, throat, and lungs. It spreads easily through respiratory droplets from coughs, sneezes, or talking.",
+    "metadata": {
+      "chapter": 1,
+      "section": 1.1,
+      "type": "section"
+    }
+  },
+  {
+    "id": "section-1.2",
+    "title": "Types of Influenza Viruses",
+    "content": "There are four main types of influenza viruses: A, B, C, and D. Influenza A and B are responsible for the seasonal flu outbreaks that occur each year.",
+    "metadata": {
+      "chapter": 1,
+      "section": 1.2,
+      "type": "section"
+    }
+  },
+  {
+    "id": "chapter-2",
+    "title": "Causes and Risk Factors",
+    "content": "Influenza is caused by infection with influenza viruses, which mutate frequently. Risk factors include age, certain medical conditions, and weakened immune systems.",
+    "metadata": {
+      "chapter": 2,
+      "type": "chapter"
+    }
+  },
+  {
+    "id": "section-2.1",
+    "title": "Transmission of Influenza",
+    "content": "The flu spreads through respiratory droplets when an infected person coughs, sneezes, or talks. It can also spread by touching contaminated surfaces and then touching the face.",
+    "metadata": {
+      "chapter": 2,
+      "section": 2.1,
+      "type": "section"
+    }
+  },
+  {
+    "id": "section-2.2",
+    "title": "High-Risk Groups",
+    "content": "The elderly, young children, pregnant women, and individuals with chronic medical conditions or weakened immune systems are at higher risk of severe flu complications.",
+    "metadata": {
+      "chapter": 2,
+      "section": 2.2,
+      "type": "section"
+    }
+  },
+  {
+    "id": "chapter-3",
+    "title": "Symptoms of Influenza",
+    "content": "Common symptoms include fever, cough, sore throat, muscle aches, fatigue, and chills. In severe cases, influenza can cause pneumonia and other complications.",
+    "metadata": {
+      "chapter": 3,
+      "type": "chapter"
+    }
+  },
+  {
+    "id": "section-3.1",
+    "title": "Common Symptoms",
+    "content": "Symptoms often include a sudden onset of fever, dry cough, sore throat, nasal congestion, and body aches. These symptoms typically last about a week.",
+    "metadata": {
+      "chapter": 3,
+      "section": 3.1,
+      "type": "section"
+    }
+  },
+  {
+    "id": "section-3.2",
+    "title": "Severe Symptoms and Complications",
+    "content": "Severe cases may lead to difficulty breathing, persistent chest pain, or confusion. Complications include pneumonia, bronchitis, and exacerbation of chronic conditions.",
+    "metadata": {
+      "chapter": 3,
+      "section": 3.2,
+      "type": "section"
+    }
+  },
+  {
+    "id": "chapter-4",
+    "title": "Diagnosis and Treatment",
+    "content": "Influenza is diagnosed based on symptoms and can be confirmed with rapid diagnostic tests. Treatment includes rest, hydration, and antiviral medications for severe cases.",
+    "metadata": {
+      "chapter": 4,
+      "type": "chapter"
+    }
+  },
+  {
+    "id": "section-4.1",
+    "title": "Diagnostic Methods",
+    "content": "Doctors often diagnose flu based on clinical symptoms during flu season. Rapid influenza diagnostic tests (RIDTs) or PCR tests can confirm the diagnosis.",
+    "metadata": {
+      "chapter": 4,
+      "section": 4.1,
+      "type": "section"
+    }
+  },
+  {
+    "id": "section-4.2",
+    "title": "Treatment Approaches",
+    "content": "Mild cases can be managed with rest, fluids, and over-the-counter medications. Antiviral drugs like oseltamivir (Tamiflu) may be prescribed for severe cases.",
+    "metadata": {
+      "chapter": 4,
+      "section": 4.2,
+      "type": "section"
+    }
+  },
+  {
+    "id": "chapter-5",
+    "title": "Prevention and Vaccination",
+    "content": "Annual flu vaccination is the most effective way to prevent influenza. Good hygiene practices, like handwashing, can also reduce the risk of infection.",
+    "metadata": {
+      "chapter": 5,
+      "type": "chapter"
+    }
+  },
+  {
+    "id": "section-5.1",
+    "title": "Influenza Vaccination",
+    "content": "The flu vaccine is updated annually to target the most common strains of the virus. It is recommended for everyone over 6 months of age.",
+    "metadata": {
+      "chapter": 5,
+      "section": 5.1,
+      "type": "section"
+    }
+  },
+  {
+    "id": "section-5.2",
+    "title": "Hygiene and Other Prevention Strategies",
+    "content": "Frequent handwashing, covering your mouth when coughing or sneezing, and avoiding close contact with sick individuals can help prevent flu transmission.",
+    "metadata": {
+      "chapter": 5,
+      "section": 5.2,
+      "type": "section"
+    }
+  }
+,
+  {
+    "id": "chapter-1",
+    "title": "Understanding Asthma",
+    "content": "Asthma is a chronic respiratory condition that causes inflammation and narrowing of the airways, making breathing difficult. It affects people of all ages and can range from mild to severe.",
+    "metadata": {
+      "chapter": 1,
+      "type": "chapter"
+    }
+  },
+  {
+    "id": "section-1.1",
+    "title": "What is Asthma?",
+    "content": "Asthma is characterized by episodes of wheezing, shortness of breath, chest tightness, and coughing. These symptoms occur due to inflammation and sensitivity of the airways to certain triggers.",
+    "metadata": {
+      "chapter": 1,
+      "section": 1.1,
+      "type": "section"
+    }
+  },
+  {
+    "id": "section-1.2",
+    "title": "Types of Asthma",
+    "content": "There are several types of asthma, including allergic asthma triggered by allergens, exercise-induced asthma, and occupational asthma caused by workplace irritants.",
+    "metadata": {
+      "chapter": 1,
+      "section": 1.2,
+      "type": "section"
+    }
+  },
+  {
+    "id": "chapter-2",
+    "title": "Causes and Triggers",
+    "content": "Asthma can be triggered by a combination of genetic and environmental factors, including allergens, respiratory infections, and air pollution.",
+    "metadata": {
+      "chapter": 2,
+      "type": "chapter"
+    }
+  },
+  {
+    "id": "section-2.1",
+    "title": "Common Triggers",
+    "content": "Common asthma triggers include pollen, dust mites, mold, pet dander, smoke, cold air, and strong odors. Physical exertion and stress can also provoke symptoms.",
+    "metadata": {
+      "chapter": 2,
+      "section": 2.1,
+      "type": "section"
+    }
+  },
+  {
+    "id": "section-2.2",
+    "title": "Genetic Factors",
+    "content": "Asthma often runs in families, indicating a genetic predisposition. However, not everyone with a family history of asthma will develop the condition.",
+    "metadata": {
+      "chapter": 2,
+      "section": 2.2,
+      "type": "section"
+    }
+  },
+  {
+    "id": "chapter-3",
+    "title": "Managing and Treating Asthma",
+    "content": "Asthma management involves avoiding triggers, using prescribed medications, and monitoring symptoms. With proper care, most people can lead normal, active lives.",
+    "metadata": {
+      "chapter": 3,
+      "type": "chapter"
+    }
+  },
+  {
+    "id": "section-3.1",
+    "title": "Medications",
+    "content": "Asthma medications include long-term control drugs like inhaled corticosteroids and quick-relief inhalers such as bronchodilators to ease acute symptoms.",
+    "metadata": {
+      "chapter": 3,
+      "section": 3.1,
+      "type": "section"
+    }
+  },
+  {
+    "id": "section-3.2",
+    "title": "Lifestyle Adjustments",
+    "content": "Maintaining a healthy lifestyle, avoiding triggers, and using an asthma action plan can help reduce the frequency and severity of symptoms.",
+    "metadata": {
+      "chapter": 3,
+      "section": 3.2,
+      "type": "section"
+    }
+  }
+]
+
+

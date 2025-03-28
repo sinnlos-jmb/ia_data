@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>diagnosticador IA - LLM</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h1 {
+      color: #333;
+    }
+    textarea {
+      width: 60%;
+      height: 80px;
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+    button {
+      background-color: #007BFF;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .ta {
+      width: 65%;
+      height: 100px;
+      border: 2px solid blue;
+    }
+.input {
+  border: 2px solid blue;
+  height: 25px;
+  font-size: 14px;
+}
+
+.inp {
+  width: 250px;
+}
+
+.inp_big {
+  width: 380px;
+}
+    
+select {
+    width: 250px;
+    padding: 4px;
+    font-size: 14px;
+    border: 2px solid blue;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+    margin-bottom: 4px;
+  }
+
+  /* Styling for selected option */
+  select option:checked {
+    background-color: #007BFF;
+    color: white;
+    font-weight: bold;
+  }
+
+  /* Dropdown hover focus */
+  select:focus {
+    outline: none;
+    border-color: #0056b3;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }    
+</style>
+</head>
+<body>
+  <h1>IA Diagnósticos Presuntivos</h1>
+  <form id="diagnosis-form">
+    <label for="context">Ingresar contexto:</label><br>    
+    <textarea id="context" name="context" class="ta" required>
+As a medical assistant, based on the symptoms and the diagnose you receive from the doctor. Provide the name of the disease followed by a simple defininition of it, and an explanation of how the disease pointed by the doctor causes the symptoms. Make a list of the top three measures to get better as part of a treatment. Take your time to formulate the response. The response should have less than 180 tokens.    
+    </textarea>
+    <br>
+    <table><tr>
+     <td><label for="diagnostico">Diagnostico :</label><br>
+ 	  <input type="text" id="diagnostico" name="diagnostico" class="input inp"> </td>
+ 	 <td> <label for="symptoms">Síntomas :</label><br>
+	  <input type="text" id="symptoms" name="symptoms" class="input inp_big"> </td></tr>
+	  <tr><td colspan="2" style="height:35px"> 
+	  
+
+    <label for="dd_diseases">Seleccionar patologia :</label><br>    
+<select name="dd_diseases" onchange="updateInputs(this)">
+  <option value="">Patologias...</option>
+  <option value="memory loss, cognitive impairment, progressive disorder">Alzheimer's Disease</option>
+  <option value="fatigue, tiredness, low hemoglobin, red blood cells">Anemia</option>
+  <option value="chest pain, heart disconfort, reduced blood flow">Angina</option>
+  <option value="abdominal pain, stomach pain, inflammation, appendix">Appendicitis</option>
+  <option value="breathing problems, inflammation, airway narrowing">Asthma</option>
+  <option value="irregular heartbeat, irregular rhythm, heart condition, arrhythmia">Atrial Fibrillation</option>
+  <option value="coughing, mucus, bronchial inflammation">Bronchitis</option>
+  <option value="blurred vision, eye lens, vision impairment">Cataracts</option>
+  <option value="rectal bleeding, stool blood">Colorectal Cancer</option>
+  <option value="diarrhea, bowel inflammation, digestive disease">Crohn's Disease</option>
+  <option value="leg pain, blood clot, leg swelling">Deep Vein Thrombosis (DVT)</option>
+  <option value="thirst, fluid imbalance, rare diabetes">Diabetes Insipidus</option>
+  <option value="weight loss, blood sugar, metabolic disorder, weight loss">Diabetes</option>
+  <option value="skin rash, itchy skin, redness, chronic rash">Eczema</option>
+  <option value="seizures, brain activity, neurological disorder">Epilepsy</option>
+  <option value="swallowing difficulty, esophagus, cancer">Esophageal Cancer</option>
+  <option value="fever, viral infection, respiratory illness">Influenza</option>
+  <option value="bleeding disorder, clotting factor, genetic">Hemophilia</option>
+  <option value="weight gain, low thyroid, hormonal imbalance">Hypothyroidism</option>
+  <option value="liver disease, yellow skin, yellow eyes, bilirubin">Jaundice</option>
+  <option value="kidney dysfunction, dark urine, waste buildup">Kidney Disease</option>
+  <option value="swollen nodes, cancer, lymphatic system">Lymphoma</option>
+  <option value="sever headache, sensitivity to light, nausea">Migraine</option>
+  <option value="bone weakness, frequent fractures, low bone density">Osteoporosis</option>
+  <option value="shortness of breath, breathlessness, lung pressure, heart complications">Pulmonary Hypertension</option>
+  <option value="joint pain, arthritis, joint inflammation, chronic pain">Rheumatoid Arthritis</option>
+  <option value="mouth dryness, gland damage">Sjogren's Syndrome</option>
+  <option value="sore throat, tonsil inflammation, infection">Tonsillitis</option>
+  <option value="frequent urination, urine infection, bacteria">Urinary Tract Infection (UTI)</option>
+</select>
+
+
+  	  </td>
+  	  
+  	  </tr>
+  	  
+  	<tr><td>
+  	    <label for="dd_llm">Seleccionar llm:</label><br>    
+<select name="dd_llm" id="dd_llm">
+  <option value="phi3">phi (microsoft)</option>
+  <option value="phi4">phi4 9b (microsoft)</option>
+  <option value="phi4-mini:latest">phi4 3.8b</option>
+  <option value="hermes3:3b">hermes3 3b</option>
+  <option value="gemma2:2b">gemma2 (google)</option>
+  <option value="gemma3:1b" selected>gemma3 1b</option>
+  <option value="qwen2.5:0.5b">qwen mini (alibaba)</option>
+  <option value="llama3.2">llama3.2 (meta)</option>
+  <option value="llama3.2:1b">llama3.2 mini (meta)</option>
+  <option value="dolphin3">dolphin3</option>
+  <option value="olmo2:7b">olmo2</option>
+  <option value="command-r7b">command r7b (cohere)</option>
+  <option value="deepseek-r1:1.5b">deepseek-r1 mini</option>
+  <option value="deepscaler">deepscaler (1.5b)</option>
+  <option value="deepseek-r1:8b">deepseek-r1 8b</option>
+  <option value="falcon3:1b">falcon3 mini</option>
+  <option value="falcon3:3b">falcon3 3b</option>
+  <option value="falcon3:10b">falcon3 10b</option>
+  <option value="command-r7b">command-r7b (cohere)</option>
+  <option value="mistral-nemo" disabled>mistral</option>
+  <option value="llama3-chatqa" disabled>llama3 (chat)</option>
+  <option value="granite3.2:2b">granite (ibm)</option>
+  	</td>
+  	<td style="text-align: center;"> <button type="submit">Generar diagnóstico</button> </td>
+  	</tr>
+	</table>
+    
+  </form>
+
+  <h3>Response:</h3>
+  <textarea id="response" class="ta" style="height:333px;" readonly></textarea> <!-- For dynamic response display -->
+
+<h3>Preguntas del paciente:</h3>
+ <form id="chat-form">
+  <input type="text" id="patient-question" placeholder="Escribe tu pregunta aquí">
+  <button id="ask-question">Preguntar</button>
+ </form>
+
+  <h3>Respuesta a la pregunta:</h3>
+  <textarea id="response2" class="ta" readonly></textarea>
+  
+  
+     <table><tr>
+     <td>
+     <form id="symptoms-form">
+     	<label for="lista_symptoms">Ingrese sus sintomas: </label><br>
+ 	  	<input type="text" id="lista_symptoms" name="lista_symptoms" class="input inp">
+ 	  	<button id="ask-question3">Preguntar</button>
+ 	 </form>
+ 	 </td></tr>
+	 </table>
+  <h3>Ids de los sintomas:</h3>
+  <textarea id="response3" class="ta" readonly></textarea>  
+  
+  <script>
+  
+    function updateInputs(selectElement) {
+      
+      const selectedOption = selectElement.options[selectElement.selectedIndex];
+      document.getElementById('diagnostico').value = selectedOption.text;
+      document.getElementById('symptoms').value = selectedOption.value;
+    }  
+  
+
+
+    document.getElementById("diagnosis-form").addEventListener("submit", async (event) => {
+      event.preventDefault(); // Prevent the form from submitting traditionally
+
+      const symptoms = document.getElementById("symptoms").value;
+      const context = document.getElementById("context").value;
+      const diagnostico = document.getElementById("diagnostico").value;
+      const responseElement = document.getElementById("response");
+      const llm = document.getElementById("dd_llm").value;
+
+      responseElement.textContent = "Procesando diagnóstico...";
+
+      try {
+        const response = await fetch("/diagnosis", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ symptoms, diagnostico, context, llm }),
+        });
+
+        if (!response.ok) {
+          responseElement.textContent = `Error: ${response.statusText}`;
+          return;
+        }
+
+        const reader = response.body.getReader();
+        const decoder = new TextDecoder("utf-8");
+        let chunk = "";
+
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+
+          chunk += decoder.decode(value);
+          responseElement.textContent = chunk; // Append streamed content
+        }
+      } catch (error) {
+        responseElement.textContent = `Error al generar el diagnóstico: ${error.message}`;
+      }
+    });
+    
+
+    
+    document.getElementById("chat-form").addEventListener("submit", async (event) => {
+    
+      event.preventDefault();
+      const question = document.getElementById("patient-question").value;
+      const responseElement = document.getElementById("response2");
+      const llm = document.getElementById("dd_llm").value;
+
+      responseElement.value = "Procesando pregunta...";
+
+      try {
+        const response = await fetch("/ask", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ question, llm }),
+        });
+        
+        
+         if (!response.ok) {
+          responseElement.value = `Error: ${response.statusText}`;
+          return;
+        }
+
+        const reader = response.body.getReader();
+        const decoder = new TextDecoder("utf-8");
+        let chunk = "";
+
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+
+          chunk += decoder.decode(value);
+          responseElement.value = chunk; // Append streamed content
+        }
+
+
+
+
+      } catch (error) {
+        responseElement.value = `Error: ${error.message}`;
+      }
+    });
+    
+    
+ 
+    document.getElementById("symptoms-form").addEventListener("submit", async (event) => {
+    
+      event.preventDefault();
+      const lista_symptoms = document.getElementById("lista_symptoms").value;
+      const responseElement = document.getElementById("response3");
+      const llm = document.getElementById("dd_llm").value;
+
+      responseElement.value = "Procesando pregunta...";
+
+      try {
+        const response = await fetch("/symptoms", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ lista_symptoms, llm }),
+        });
+        
+        
+         if (!response.ok) {
+          responseElement.value = `Error: ${response.statusText}`;
+          return;
+        }
+
+        const reader = response.body.getReader();
+        const decoder = new TextDecoder("utf-8");
+        let chunk = "";
+
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+
+          chunk += decoder.decode(value);
+          responseElement.value = chunk; // Append streamed content
+        }
+
+      } catch (error) {
+        responseElement.value = `Error: ${error.message}`;
+      }
+    });
+    
+
+  </script>
+</body>
+</html>

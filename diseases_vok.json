@@ -1,0 +1,205 @@
+[
+  {
+    "disease": "Flu",
+    "category": "Respiratory",
+    "severity": "Moderate",
+    "description": "Influenza is a contagious viral infection that affects the respiratory system, causing symptoms such as fever, cough, and fatigue.",
+    "symptoms": [
+      { "symptom": "fever", "weight": 0.9 },
+      { "symptom": "cough", "weight": 0.8 },
+      { "symptom": "sore throat", "weight": 0.7 },
+      { "symptom": "fatigue", "weight": 0.6 }
+    ],
+    "usual_treatment": {
+      "mild": [
+        "Rest and hydration",
+        "Over-the-counter fever reducers",
+        "Warm saltwater gargles for sore throat"
+      ]
+    },
+    "possible_complications": [
+      "Pneumonia",
+      "Sinus infections",
+      "Worsened chronic conditions like asthma"
+    ],
+    "prevention": [
+      "Annual flu vaccination",
+      "Regular handwashing",
+      "Avoiding contact with sick individuals"
+    ]
+  },
+  {
+    "disease": "Common Cold",
+    "category": "Respiratory",
+    "severity": "Mild",
+    "description": "A viral infection of the upper respiratory tract, causing symptoms such as a runny nose, sneezing, and coughing.",
+    "symptoms": [
+      { "symptom": "runny nose", "weight": 0.9 },
+      { "symptom": "sneezing", "weight": 0.8 },
+      { "symptom": "cough", "weight": 0.6 },
+      { "symptom": "sore throat", "weight": 0.5 }
+    ],
+    "usual_treatment": {
+      "mild": [
+        "Rest and hydration",
+        "Steam inhalation for congestion relief",
+        "Over-the-counter decongestants"
+      ]
+    },
+    "possible_complications": [
+      "Sinus infections",
+      "Middle ear infections",
+      "Worsened asthma symptoms"
+    ],
+    "prevention": [
+      "Frequent handwashing",
+      "Avoiding touching your face",
+      "Maintaining good hygiene"
+    ]
+  },
+  {
+    "disease": "COVID-19",
+    "category": "Respiratory",
+    "severity": "Severe",
+    "description": "A highly contagious respiratory illness caused by the SARS-CoV-2 virus, with symptoms ranging from mild to severe.",
+    "symptoms": [
+      { "symptom": "fever", "weight": 0.8 },
+      { "symptom": "cough", "weight": 0.7 },
+      { "symptom": "loss of taste or smell", "weight": 0.9 },
+      { "symptom": "difficulty breathing", "weight": 1.0 }
+    ],
+    "usual_treatment": {
+      "mild": [
+        "Isolation to prevent spread",
+        "Rest and hydration",
+        "Pain relievers for fever"
+      ]
+    },
+    "possible_complications": [
+      "Pneumonia",
+      "ARDS (acute respiratory distress syndrome)",
+      "Blood clots and heart issues"
+    ],
+    "prevention": [
+      "Vaccination",
+      "Wearing masks in crowded spaces",
+      "Frequent handwashing"
+    ]
+  },
+  {
+    "disease": "Myocardial Infarction",
+    "category": "Cardiovascular",
+    "severity": "Critical",
+    "description": "Commonly known as a heart attack, it occurs when blood flow to the heart muscle is blocked.",
+    "symptoms": [
+      { "symptom": "chest pain", "weight": 1.0 },
+      { "symptom": "shortness of breath", "weight": 0.9 },
+      { "symptom": "nausea", "weight": 0.6 },
+      { "symptom": "dizziness", "weight": 0.5 }
+    ],
+    "usual_treatment": {
+      "mild": [
+        "Heart-healthy diet and exercise",
+        "Medications like aspirin (as prescribed)",
+        "Stress management techniques"
+      ]
+    },
+    "possible_complications": [
+      "Heart failure",
+      "Irregular heartbeats (arrhythmias)",
+      "Stroke"
+    ],
+    "prevention": [
+      "Healthy diet and exercise",
+      "Avoiding smoking",
+      "Managing stress levels"
+    ]
+  },
+  {
+    "disease": "Diabetes Mellitus",
+    "category": "Endocrine",
+    "severity": "Chronic",
+    "description": "A metabolic disorder characterized by high blood sugar levels due to insulin issues.",
+    "symptoms": [
+      { "symptom": "frequent urination", "weight": 0.8 },
+      { "symptom": "increased thirst", "weight": 0.9 },
+      { "symptom": "unexplained weight loss", "weight": 0.7 },
+      { "symptom": "fatigue", "weight": 0.6 }
+    ],
+    "usual_treatment": {
+      "mild": [
+        "Blood sugar monitoring",
+        "Healthy diet and regular exercise",
+        "Oral medications as prescribed"
+      ]
+    },
+    "possible_complications": [
+      "Kidney damage",
+      "Neuropathy",
+      "Heart disease"
+    ],
+    "prevention": [
+      "Maintaining a healthy weight",
+      "Regular physical activity",
+      "Eating a balanced diet"
+    ]
+  },
+  {
+    "disease": "Asthma",
+    "category": "Respiratory",
+    "severity": "Chronic",
+    "description": "A chronic condition causing inflammation and narrowing of the airways, leading to breathing difficulties.",
+    "symptoms": [
+      { "symptom": "wheezing", "weight": 0.9 },
+      { "symptom": "shortness of breath", "weight": 0.8 },
+      { "symptom": "chest tightness", "weight": 0.7 },
+      { "symptom": "coughing at night", "weight": 0.6 }
+    ],
+    "usual_treatment": {
+      "mild": [
+        "Inhalers for symptom control",
+        "Avoiding triggers (dust, pollen, etc.)",
+        "Regular monitoring and medication"
+      ]
+    },
+    "possible_complications": [
+      "Severe asthma attacks",
+      "Permanent airway remodeling",
+      "Decreased lung function"
+    ],
+    "prevention": [
+      "Avoiding known triggers",
+      "Using preventive inhalers as prescribed",
+      "Regular checkups with a doctor"
+    ]
+  },
+  {
+    "disease": "Hypertension",
+    "category": "Cardiovascular",
+    "severity": "Chronic",
+    "description": "A condition where blood pressure is persistently higher than normal, increasing the risk of heart disease and stroke.",
+    "symptoms": [
+      { "symptom": "headaches", "weight": 0.6 },
+      { "symptom": "shortness of breath", "weight": 0.7 },
+      { "symptom": "nosebleeds", "weight": 0.5 },
+      { "symptom": "dizziness", "weight": 0.4 }
+    ],
+    "usual_treatment": {
+      "mild": [
+        "Lifestyle changes (diet and exercise)",
+        "Reducing salt intake",
+        "Medications as prescribed"
+      ]
+    },
+    "possible_complications": [
+      "Heart attack",
+      "Stroke",
+      "Kidney damage"
+    ],
+    "prevention": [
+      "Healthy lifestyle",
+      "Regular blood pressure monitoring",
+      "Managing stress"
+    ]
+  }
+]

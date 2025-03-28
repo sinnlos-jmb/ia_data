@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>diagnosticador IA - LLM</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h1 {
+      color: #333;
+    }
+    textarea {
+      width: 60%;
+      height: 80px;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    button {
+      background-color: #007BFF;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .ta {
+      width: 80%;
+      height: 250px;
+      border: 2px solid blue;
+    }
+    .inp {
+      width: 150px;
+      border: 2px solid blue;
+    }
+</style>
+</head>
+<body>
+  <h1>IA Diagnósticos Presuntivos</h1>
+  <p>Ejemplo: fever, cough.</p>
+  <form id="diagnosis-form">
+    <label for="symptoms">Ingresar síntomas:</label><br>    
+    <textarea id="symptoms" name="symptoms" class="ta" style="height:40px; width:50%;" required></textarea><br>
+    <label for="diagnostico">Diagnostico :</label><br>    
+	<input type="text" id="diagnostico" name="diagnostico" class="inp"></textarea><br><br>
+    <button type="submit">Generar diagnóstico</button>
+  </form>
+
+  <h3>Response:</h3>
+  <textarea id="response" class="ta"></textarea> <!-- For dynamic response display -->
+
+  <script>
+    document.getElementById("diagnosis-form").addEventListener("submit", async (event) => {
+      event.preventDefault(); // Prevent the form from submitting traditionally
+
+      const symptoms = document.getElementById("symptoms").value;
+      const diagnostico = document.getElementById("diagnostico").value;
+      const responseElement = document.getElementById("response");
+
+      responseElement.textContent = "Procesando diagnóstico...";
+
+      try {
+        const response = await fetch("/diagnosis", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ symptoms, diagnostico }),
+        });
+
+        if (!response.ok) {
+          responseElement.textContent = `Error: ${response.statusText}`;
+          return;
+        }
+
+        const reader = response.body.getReader();
+        const decoder = new TextDecoder("utf-8");
+        let chunk = "";
+
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+
+          chunk += decoder.decode(value);
+          responseElement.textContent = chunk; // Append streamed content
+        }
+      } catch (error) {
+        responseElement.textContent = `Error al generar el diagnóstico: ${error.message}`;
+      }
+    });
+  </script>
+</body>
+</html>

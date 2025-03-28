@@ -1,0 +1,382 @@
+[
+    {
+        "id": 1,
+        "symptom": "shortness of breath"
+    },
+    {
+        "id": 2,
+        "symptom": "breathlessness"
+    },
+    {
+        "id": 3,
+        "symptom": "lung pressure"
+    },
+    {
+        "id": 4,
+        "symptom": "palpitations"
+    },
+    {
+        "id": 5,
+        "symptom": "chest pain"
+    },
+    {
+        "id": 6,
+        "symptom": "heart disconfort"
+    },
+    {
+        "id": 7,
+        "symptom": "reduced blood flow"
+    },
+    {
+        "id": 8,
+        "symptom": "cough"
+    },
+    {
+        "id": 9,
+        "symptom": "mucus"
+    },
+    {
+        "id": 10,
+        "symptom": "bronchial inflammation"
+    },
+    {
+        "id": 11,
+        "symptom": "joint pain"
+    },
+    {
+        "id": 12,
+        "symptom": "arthritis"
+    },
+    {
+        "id": 13,
+        "symptom": "joint inflammation"
+    },
+    {
+        "id": 14,
+        "symptom": "chronic pain"
+    },
+    {
+        "id": 15,
+        "symptom": "skin rash"
+    },
+    {
+        "id": 16,
+        "symptom": "itchy skin"
+    },
+    {
+        "id": 17,
+        "symptom": "redness"
+    },
+    {
+        "id": 18,
+        "symptom": "chronic rash"
+    },
+    {
+        "id": 19,
+        "symptom": "seizures"
+    },
+    {
+        "id": 20,
+        "symptom": "brain activity"
+    },
+    {
+        "id": 21,
+        "symptom": "neurological disorder"
+    },
+    {
+        "id": 22,
+        "symptom": "memory loss"
+    },
+    {
+        "id": 23,
+        "symptom": "cognitive impairment"
+    },
+    {
+        "id": 24,
+        "symptom": "progressive disorder"
+    },
+    {
+        "id": 25,
+        "symptom": "weight loss"
+    },
+    {
+        "id": 26,
+        "symptom": "blood sugar"
+    },
+    {
+        "id": 27,
+        "symptom": "metabolic disorder"
+    },
+    {
+        "id": 28,
+        "symptom": "abdominal pain"
+    },
+    {
+        "id": 29,
+        "symptom": "stomach pain"
+    },
+    {
+        "id": 30,
+        "symptom": "inflammation"
+    },
+    {
+        "id": 31,
+        "symptom": "appendix"
+    },
+    {
+        "id": 32,
+        "symptom": "fever"
+    },
+    {
+        "id": 33,
+        "symptom": "viral infection"
+    },
+    {
+        "id": 34,
+        "symptom": "respiratory illness"
+    },
+    {
+        "id": 35,
+        "symptom": "frequent urination"
+    },
+    {
+        "id": 36,
+        "symptom": "urine infection"
+    },
+    {
+        "id": 37,
+        "symptom": "bacteria"
+    },
+    {
+        "id": 38,
+        "symptom": "fatigue"
+    },
+    {
+        "id": 39,
+        "symptom": "tiredness"
+    },
+    {
+        "id": 40,
+        "symptom": "low hemoglobin"
+    },
+    {
+        "id": 41,
+        "symptom": "red blood cells"
+    },
+    {
+        "id": 42,
+        "symptom": "blurred vision"
+    },
+    {
+        "id": 43,
+        "symptom": "eye lens"
+    },
+    {
+        "id": 44,
+        "symptom": "vision impairment"
+    },
+    {
+        "id": 45,
+        "symptom": "headache"
+    },
+    {
+        "id": 46,
+        "symptom": "sensitivity to light"
+    },
+    {
+        "id": 47,
+        "symptom": "nausea"
+    },
+    {
+        "id": 48,
+        "symptom": "swollen nodes"
+    },
+    {
+        "id": 49,
+        "symptom": "cancer"
+    },
+    {
+        "id": 50,
+        "symptom": "lymphatic system"
+    },
+    {
+        "id": 51,
+        "symptom": "swallowing difficulty"
+    },
+    {
+        "id": 52,
+        "symptom": "esophagus"
+    },
+    {
+        "id": 53,
+        "symptom": "diarrhea"
+    },
+    {
+        "id": 54,
+        "symptom": "bowel inflammation"
+    },
+    {
+        "id": 55,
+        "symptom": "digestive disease"
+    },
+    {
+        "id": 56,
+        "symptom": "leg pain"
+    },
+    {
+        "id": 57,
+        "symptom": "blood clot"
+    },
+    {
+        "id": 58,
+        "symptom": "leg swelling"
+    },
+    {
+        "id": 59,
+        "symptom": "numbness"
+    },
+    {
+        "id": 60,
+        "symptom": "nerve damage"
+    },
+    {
+        "id": 61,
+        "symptom": "tingling in hands and feet"
+    },
+    {
+        "id": 62,
+        "symptom": "bone weakness"
+    },
+    {
+        "id": 63,
+        "symptom": "frequent fractures"
+    },
+    {
+        "id": 64,
+        "symptom": "low bone density"
+    },
+    {
+        "id": 65,
+        "symptom": "thirst"
+    },
+    {
+        "id": 66,
+        "symptom": "fluid imbalance"
+    },
+    {
+        "id": 67,
+        "symptom": "rare diabetes"
+    },
+    {
+        "id": 68,
+        "symptom": "liver disease"
+    },
+    {
+        "id": 69,
+        "symptom": "yellow skin"
+    },
+    {
+        "id": 70,
+        "symptom": "yellow eyes"
+    },
+    {
+        "id": 71,
+        "symptom": "bilirubin"
+    },
+    {
+        "id": 72,
+        "symptom": "bleeding disorder"
+    },
+    {
+        "id": 73,
+        "symptom": "clotting factor"
+    },
+    {
+        "id": 74,
+        "symptom": "genetic"
+    },
+    {
+        "id": 75,
+        "symptom": "weight gain"
+    },
+    {
+        "id": 76,
+        "symptom": "low thyroid"
+    },
+    {
+        "id": 77,
+        "symptom": "hormonal imbalance"
+    },
+    {
+        "id": 78,
+        "symptom": "breathing problems"
+    },
+    {
+        "id": 79,
+        "symptom": "airway narrowing"
+    },
+    {
+        "id": 80,
+        "symptom": "rectal bleeding"
+    },
+    {
+        "id": 81,
+        "symptom": "stool blood"
+    },
+    {
+        "id": 82,
+        "symptom": "sore throat"
+    },
+    {
+        "id": 83,
+        "symptom": "tonsil inflammation"
+    },
+    {
+        "id": 84,
+        "symptom": "infection"
+    },
+    {
+        "id": 85,
+        "symptom": "irregular heartbeat"
+    },
+    {
+        "id": 86,
+        "symptom": "irregular rhythm"
+    },
+    {
+        "id": 87,
+        "symptom": "heart condition"
+    },
+    {
+        "id": 88,
+        "symptom": "arrhythmia"
+    },
+    {
+        "id": 89,
+        "symptom": "kidney dysfunction"
+    },
+    {
+        "id": 90,
+        "symptom": "dark urine"
+    },
+    {
+        "id": 91,
+        "symptom": "waste buildup"
+    },
+    {
+        "id": 92,
+        "symptom": "mouth dryness"
+    },
+    {
+        "id": 93,
+        "symptom": "gland damage"
+    },
+    {
+        "id": 94,
+        "symptom": "vomiting"
+    },
+    {
+        "id": 95,
+        "symptom": "dehydration"
+    }
+]
