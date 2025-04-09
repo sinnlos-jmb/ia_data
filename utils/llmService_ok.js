@@ -9,8 +9,6 @@ import http from "http";
  */
 export const generateDiagnosis = async (llm, sys, prompt, is_chat, max_tokens, onChunk) => {
   try {
-    
-    //console.log(prompt);
     let payload, apiUrl;
     if (is_chat){
     	apiUrl = "http://localhost:11434/api/chat";
@@ -25,12 +23,6 @@ export const generateDiagnosis = async (llm, sys, prompt, is_chat, max_tokens, o
     					"top_k": 5,
     					"top_p": 0.2,
     					"num_ctx": 896,
-    					"stop": [
-        					"<|system|>",
-        					"<|user|>",
-        					"<|end|>",
-        					"<|assistant|>"
-    						],
     					"num_predict": max_tokens },//max_tokens: 250
       		 }); 
     	}
@@ -50,11 +42,7 @@ export const generateDiagnosis = async (llm, sys, prompt, is_chat, max_tokens, o
     						"mirostat_tau": 1,
     						"repeat_last_n": 0,
     						"top_k": 5,
-    						"top_p": 0.2,
-    					"stop": [
-        					"<|user|>",
-        					"<|assistant|>"
-    						],    						
+    						"top_p": 0.2,				
     						"num_predict": max_tokens },//max_tokens: 250
       		 	}); 
     
@@ -123,3 +111,27 @@ export const generateDiagnosis = async (llm, sys, prompt, is_chat, max_tokens, o
     throw new Error("Failed to generate diagnosis.");
   }
 };
+
+/*
+outtakes
+    					"stop": [
+        					"<|system|>",
+        					"<|user|>",
+        					"<|end|>",
+        					"<|assistant|>"
+    						],
+
+,
+    					"stop": [
+        					"<|user|>",
+        					"<|assistant|>"
+    						],    		
+							
+para llm r1: response.replace(/<think>.*?<\/think>/g, '');	
+        let startIndex = llm_rta.indexOf('<think>');
+        let endIndex = llm_rta.indexOf('</think>', startIndex);
+        
+        llm_rta = llm_rta.substring(0, startIndex) + llm_rta.substring(endIndex + 8); // 8 is the length of `</think>`
+    	console.log("regex: "+llm_rta);
+
+							*/
