@@ -9,7 +9,7 @@ const rl = readline.createInterface({
 
 const ollama = new Ollama();
 
-ollama.setModel("phi4-mini:latest n");
+ollama.setModel("phi4-mini:latest");
 ollama.setSystemMessage("Eres un asistente útil.");
 ollama.setOptions({ temperature: 0.5, maxTokens: 100, stream: true });
 

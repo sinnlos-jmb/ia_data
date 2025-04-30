@@ -154,22 +154,49 @@ app.post('/symptoms', async (req, res) => {
 
 let diseases= [{id:1, symptom:"fever"}, {id:2, symptom:"cough"}, {id:3, symptom:"headache"}, {id:4, symptom:"frequent urination"}, {id:5, symptom:"palpitations"}, {id:6, symptom:"chest pain"}, {id:7, symptom:"fatigue"}];
 //console.log(JSON.stringify(diseases));
-let vec_dis=["1. fever", "2. cough", "3. headache", "4. frequent urination", "5. palpitations", "6. chest pain", "7. fatigue"];
+let vec_dis0=["1. fever", "2. cough", "3. headache", "4. frequent urination", "5. palpitations", "6. chest pain", "7. fatigue"];
 //console.log(vec_dis);
+let vec_dis1=["fever", "cough", "headache", "frequent urination", "palpitations", "chest pain", "fatigue"];
+let vec_dis=["fever:1", " cough:2", " headache:3", " frequent urination:4", " palpitations:5", " chest pain:6", " fatigue:7"];
+console.log("array: "+vec_dis);
+const vec_dis_ok = [
+  "fever:1", 
+  "cough:2", 
+  "headache:3", 
+  "frequent urination:4", 
+  "palpitations:5", 
+  "chest pain:6", 
+  "fatigue:7"
+];
+
+const chat1 = [
+    {
+      role: "system",
+      content: "You are a medical assistant. Your task is to identify the institutional codes for symptoms reported by the patient. The institution's list of symptom codes is as follows:\n" + vec_dis.join(", ") + "."
+    },
+    {
+      role: "assistant",
+      content: "Please provide the symptoms reported by the patient so I can return the corresponding codes."
+    },
+    {
+      role: "user",
+      content: "The patient reports the following symptoms: " + params.lista_symptoms + ". What are their corresponding codes?"
+    }
+  ];
 
   try {
 
     const chat=[{
     	role: "system",
-    	content: "You are a medical assistant tasked with identifying the ids of the symptoms reported by the patient. You have only to list the ids of the symptoms you receive according to the following list: "+vec_dis.toString()+". Don't use any other data, if you cannot find a match of the symptom, ask the user for a synomym."
+    	content: "You are a medical assistant tasked with identifying the institutional codes of the symptoms reported by the patient. Institution list of codes consists in name of symptom:code.\nInstitution list: "+vec_dis+"."
   		},
   		{
         role: 'assistant',
-        content: "what's the list of symptoms I should give the ids?",
+        content: "what's the user's symptoms of which I should give the corresponding index in the array?",
       	},
   		{
       	role: 'user',
-      	content: "my symptoms are: "+params.lista_symptoms,
+      	content: "my symptoms are: "+params.lista_symptoms+". What are the corresponding codes.",
       	}
       	];
 
@@ -178,7 +205,7 @@ let vec_dis=["1. fever", "2. cough", "3. headache", "4. frequent urination", "5.
 		res.setHeader("Connection", "keep-alive"); 
     	
     	let llm_rta = ""; // full response
-    	await generateDiagnosis(params.llm, '', chat , true, 560, (chunk) => {
+    	await generateDiagnosis(params.llm, '', chat1 , true, 560, (chunk) => {
     	 	llm_rta += chunk;
         	res.write(chunk); // Write each chunk as SSE
       	});
@@ -199,6 +226,54 @@ let vec_dis=["1. fever", "2. cough", "3. headache", "4. frequent urination", "5.
 
 
 });
+
+
+
+app.post("/symptoms2", async (req, res) => {
+
+ const params={lista_symptoms: req.body.lista_symptoms||"", llm: req.body.llm||"phi3"};
+  console.log("lista_symptoms: "+params.lista_symptoms);
+  if (!params.lista_symptoms || params.lista_symptoms.trim() === '') {
+    return res.status(400).json({ error: 'La lista de sintomas no puede estar vacía.' });
+  	}
+
+let vec_dis=["fever:1", " cough:2", " headache:3", " frequent urination:4", " palpitations:5", " chest pain:6", " fatigue:7"];
+console.log("array: "+vec_dis);
+
+    try {
+		res.setHeader("Content-Type", "text/event-stream");
+		res.setHeader("Cache-Control", "no-cache");
+		res.setHeader("Connection", "keep-alive");
+		
+		const system="You are a medical assistant. You should match this list of patient's symptoms: "+params.lista_symptoms+"\n with this list provided by the institution: "+vec_dis.toString()+". The number after the symptom is the code number you should return.";
+    	let llm_rta = ""; // Variable to store the full response
+
+		await generateDiagnosis(params.llm, system, "What is the institutional code corresponding to each of my symptoms?" , false, 680, (chunk) => {
+    	 	llm_rta += chunk;
+        	res.write(chunk); // Write each chunk as SSE
+      	});
+      	
+    	if (llm_rta.length==0) {
+      		return res.status(500).json({error: "El LLM no pudo generar un diagnostico."});
+    		}
+    	else {
+    		req.session.diagnosis=llm_rta; 
+    		console.log("almeaceno respuesta previa: "+req.session.diagnosis.substring(0,3));
+    		}
+    	
+    	res.end(); // Signal the end of the stream
+    	}
+  	catch (error) {
+    	console.error("Error processing diagnosis:", error);
+    	res.status(500).json({ error: "Failed to generate diagnosis." });
+  		}
+});
+
+
+
+
+
+
 
 // Start the server
 app.listen(3001, () => {

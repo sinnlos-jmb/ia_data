@@ -133,20 +133,17 @@ As a medical assistant, based on the symptoms and the diagnose you receive from 
   	<tr><td>
   	    <label for="dd_llm">Seleccionar llm:</label><br>    
 <select name="dd_llm" id="dd_llm">
-  <option value="phi3">phi (microsoft)</option>
   <option value="phi4">phi4 9b (microsoft)</option>
   <option value="phi4-mini:latest">phi4 3.8b</option>
   <option value="hermes3:3b">hermes3 3b</option>
-  <option value="gemma2:2b">gemma2 (google)</option>
   <option value="gemma3:1b" selected>gemma3 1b</option>
   <option value="gemma3:4b" selected>gemma3 4b</option>
-  <option value="qwen2.5:0.5b">qwen mini (alibaba)</option>
+  <option value="qwen3:0.6b">qwen mini (alibaba)</option>
+  <option value="qwen3:4b">qwen 4b</option>
   <option value="llama3.2">llama3.2 (meta)</option>
   <option value="llama3.2:1b">llama3.2 mini (meta)</option>
-  <option value="dolphin3">dolphin3</option>
-  <option value="olmo2:7b">olmo2</option>
-  <option value="exaone-deep">exone 4b</option>
-  <option value="command-r7b">command r7b (cohere)</option>
+  <option value="granite3.3:2b">granite (ibm)</option>
+  <option value="granite3.3:8b">granite 8b</option>  <option value="command-r7b">command r7b (cohere)</option>
   <option value="deepseek-r1:1.5b">deepseek-r1 mini</option>
   <option value="deepscaler">deepscaler (1.5b)</option>
   <option value="deepseek-r1:8b">deepseek-r1 8b</option>
@@ -156,7 +153,6 @@ As a medical assistant, based on the symptoms and the diagnose you receive from 
   <option value="command-r7b">command-r7b (cohere)</option>
   <option value="mistral-nemo" disabled>mistral</option>
   <option value="llama3-chatqa" disabled>llama3 (chat)</option>
-  <option value="granite3.2:2b">granite (ibm)</option>
   	</td>
   	<td style="text-align: center;"> <button type="submit">Generar diagnóstico</button> </td>
   	</tr>
@@ -296,6 +292,7 @@ As a medical assistant, based on the symptoms and the diagnose you receive from 
 
       try {
         const response = await fetch("/symptoms", {
+        //const response = await fetch("/symptoms2", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ lista_symptoms, llm }),
