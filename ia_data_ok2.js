@@ -172,7 +172,7 @@ const vec_dis_ok = [
 const chat1 = [
     {
       role: "system",
-      content: "You are a medical assistant. Your task is to identify the institutional codes for symptoms reported by the patient. The institution's list of symptom codes is as follows:\n" + vec_dis.join(", ") + "."
+      content: "You are a medical assistant. Your task is to identify the institutional codes for symptoms reported by the patient. If a reported symptom doesn't appear in the list, just report that symptom as not listed in the institution. The institution's list of symptom codes is as follows:\n" + vec_dis.join(", ") + "."
     },
     {
       role: "assistant",
